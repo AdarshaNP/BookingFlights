@@ -63,10 +63,10 @@ export class flightService{
 
     constructor(private _http:HttpClient){
     }
+
+    
     getFlights(flightDetails:flight) : Observable<any>{
-         //checking with dummy data
-        return of(this.dummyflightDetails);
-         //return this._http.get("_____",flightDetails);
+         return this._http.post("localhost:8086/api/getflight",flightDetails);
     }
 
     getUserManageBookings(flights) : Observable<any>{
