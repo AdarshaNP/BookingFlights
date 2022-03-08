@@ -13,6 +13,7 @@ export class FlightComponent implements OnInit {
 
 
   searchFlightDetails:any = {};
+  
   flightDetails:flight;
 
   constructor(private _flightService:flightService , private _router:Router,private activateRouter:ActivatedRoute) { }

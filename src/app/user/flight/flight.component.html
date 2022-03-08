@@ -1,3 +1,12 @@
+<div style="margin-top:50px;margin-left: 60px;">
+    <h4>
+        Flight Booking
+    </h4>
+</div>
+
+<div style="float:right;margin-right: 100px;">
+    <h5> <a style="cursor: pointer;" [routerLink]="['Login']">Login</a> </h5>
+</div>
 <div class="container">
     <div class="mb-3" style="margin-left: 15em;">
         <input type="radio" value="onewayTrip" name="way" [(ngModel)]="searchFlightDetails.flightWayMode"> One trip
@@ -30,7 +39,9 @@
     <div class="row mb-3">
         <label class="col-sm-2 col-form-label">Return Journey</label>
         <div class="col-sm-4">
-            <input type="date" [disabled]="searchFlightDetails.flightWayMode == 'onewayTrip'" class="form-control"
+            <input type="date"
+             [disabled]="searchFlightDetails.flightWayMode == 'onewayTrip'"
+              class="form-control"
                 [(ngModel)]="searchFlightDetails.endDateTime">
         </div>
     </div>

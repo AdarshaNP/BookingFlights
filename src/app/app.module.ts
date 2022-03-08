@@ -17,9 +17,11 @@ import { ReportsComponent } from './admin/reports/reports.component';
 import { ManageSchedulesComponent } from './admin/manage-schedules/manage-schedules.component';
 
 
+
 const appRoutes:Routes = [
 
-  {path:"", component: LoginComponent},
+  {path:"", component: FlightComponent},
+  {path:"Login" , component:LoginComponent},
   {path: "admin", component : AdminComponent,
   children:[
     {'path':'',component:ManageSchedulesComponent},
@@ -33,8 +35,9 @@ const appRoutes:Routes = [
     {'path':'',component:FlightComponent},
     {'path':'Bookings',component:ManageBookingsComponent},
     {'path':'History',component:BookingHistoryComponent}
-  ]
-}];
+  ],
+},
+{path:"**",redirectTo:""}];
 
 @NgModule({
   declarations: [
