@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+  
+  ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  ul li:last-child {
+    border-bottom: none
+  }
+
+  /* https://www.w3schools.com/css/tryit.asp?filename=trycss_list-style-border */
+
+
+  .formUl {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }

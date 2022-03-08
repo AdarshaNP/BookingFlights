@@ -1,0 +1,52 @@
+
+<div class="container">
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Select AirLine</label>
+        <div class="col-sm-4">
+            <select class="form-select" [(ngModel)]="searchManagedScheduledFlight.AirLineName">
+                <option value="Indigo">Indigo</option>
+                <option value="AirIndia">AirIndia</option>
+            </select>
+
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Fight Number</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" [(ngModel)]="searchManagedScheduledFlight.flightNumber">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Instrument Used</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" [(ngModel)]="searchManagedScheduledFlight.instrumentUsed">
+        </div>
+    </div>
+    <button type="button" (click)="searchflight(searchManagedScheduledFlight)" class="btn btn-primary">Search</button>
+
+<hr>
+<div>
+
+</div>
+<table class="table table-bordered">
+     <tbody>
+         <tr *ngFor="let manageflight of manageScheduleFlights">
+             <td>
+                 <img style="width: 50px" [src] = "manageflight.flightLogo">
+             </td>
+             <td>
+                {{manageflight.fromPlace}}
+            </td>
+            <td>
+                {{manageflight.toPlace}}
+            </td>
+            <td>
+                {{manageflight.flightNumber}}
+            </td>
+            <td>
+                <input type="button" class="btn btn-primary" value="Schedule Details">
+            </td>
+         </tr>
+     </tbody>
+</table>
+</div>

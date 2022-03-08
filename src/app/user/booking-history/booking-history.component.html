@@ -1,0 +1,13 @@
+<div class="container" style="margin:20px">
+    <table class="table table-bordered">
+        <tbody>
+            <tr *ngFor="let flight of bookingHistoryFlights">
+                <td>{{flight.startDateTime}}</td>
+                <td><img style="width:50px" [src]="flight.flightLogo"></td>
+                <td>{{flight.price}}</td>
+                <td>{{flight.businessClassSeatsCount}} seats</td>
+                <td><input type="button" class="btn btn-primary" value="ViewDetails"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

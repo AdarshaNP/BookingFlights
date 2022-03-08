@@ -1,0 +1,15 @@
+
+<div class="container" style="margin:20px">
+<table class="table table-bordered">
+    <tbody>
+        <tr *ngFor="let mBooking of ManagedBookigFlights">
+         <td><img style="width:50px" [src]="mBooking.flightLogo"></td>
+         <td>Rs{{mBooking.price}}</td>
+         <td>{{mBooking.startDateTime}}</td>
+         <td><input type="button" class="btn btn-primary" value="view"></td>
+         <td><input type="button" class="btn btn-primary" value="Download"></td>
+         <td><input type="button" class="btn btn-primary" value="Cancel"></td>
+        </tr>
+    </tbody>
+</table>
+</div>

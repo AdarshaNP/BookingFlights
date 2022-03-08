@@ -1,0 +1,20 @@
+<div style="margin:20px;float:right">
+    <a style="cursor: pointer;" [routerLink]="['']">Admin Logout</a>
+ </div>
+<div style="margin:40px" class="container">
+    <ul>
+        <li routerLinkActive="active">
+            <a [routerLink]="['./']">Manage Schedules</a>
+        </li>
+        <li>
+            <a [routerLink]="['Discounts']">Manage Discounts</a>
+        </li>
+        <li>
+            <a [routerLink]="['AirLines']">Manage AirLines</a>
+        </li>
+        <li>
+            <a [routerLink]="['Reports']">Reports</a>
+        </li>
+    </ul>
+    <router-outlet></router-outlet>
+</div>

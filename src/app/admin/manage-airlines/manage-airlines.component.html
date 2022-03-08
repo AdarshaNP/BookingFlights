@@ -1,0 +1,62 @@
+<div style="float:right;margin:10px">
+    <a *ngIf="!showNewAirLine" (click)="showNewAirLine = true" style="cursor: pointer;">Show New Employee</a>
+    <a *ngIf="showNewAirLine" (click)="showNewAirLine = false" style="cursor: pointer;">Hide New Employee</a>
+</div>
+
+<div class="container" style="margin:30px" *ngIf="showNewAirLine">
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">AirLine Name</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" [(ngModel)]="AirLine.AirLineName">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Upload Logo</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" [(ngModel)]="AirLine.Logo">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Contact Number</label>
+        <div class="col-sm-4">
+            <input type="fileupload" class="form-control" [(ngModel)]="AirLine.contactNumber">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-2 col-form-label">Contact Address</label>
+        <div class="col-sm-4">
+            <input type="fileupload" class="form-control" [(ngModel)]="AirLine.contactAddress">
+        </div>
+    </div>
+    <button type="button" (click)="evtNewAirLine(AirLine)" class="btn btn-primary">New AirLine</button>
+    <hr>
+</div>
+
+
+
+<div class="container" *ngIf="!showNewAirLine">
+    <table class="table table-bordered">
+        <tbody>
+            <tr *ngFor="let AirLine of manageAirLinesList">
+                <td>
+                    <img style="width: 40px;" alt="Logo" [src]="AirLine.Logo">
+                </td>
+                <td>
+                    {{AirLine.AirLineName}}
+                </td>
+                <td>
+                    {{AirLine.contactNumber}}
+                </td>
+                <td>
+                    {{AirLine.breifWriteUp}}
+                </td>
+                <td>
+                    <input type="button" (click)="evtViewDetails(AirLine)" value="View Details" class="btn btn-primary">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
